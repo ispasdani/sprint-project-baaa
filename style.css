@@ -1,0 +1,255 @@
+/*///////////////THIS CODE WILL APPLY TO EVERYTHING ON THE PAGE///////////////////*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*///////////////THIS CODE WILL TAKE CARE OF STYLING FOR THE NAVBAR///////////////////*/
+nav {
+    height: 10vh;
+    background-color: transparent;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    
+}
+
+.a-gg {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-icons {
+    width: 25px;
+    height: 25px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.home-icon {
+    width: 22px;
+    height: 22px;
+}
+
+.nav-li {
+    border: 1px solid transparent;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+
+}
+
+.nav-li:hover {
+    border: 1px solid white;
+    transition: 0.5s ease-in-out;
+    border-radius: 20px;
+
+}
+
+
+/* //////////////THIS CODE WILL TAKE CARE OF STYLING FOR THE HEROBOX BANNER//////////////// */
+.banner {
+    height: 90vh;
+    width: auto;
+    background-image: url("./assets/banner4.3.png");
+    background-size: cover;
+    background-position: center;
+    border-bottom-left-radius: 40%;
+}
+
+.herobox-title {
+    position: relative;
+    top: 180px;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title-1 {
+    color: white;
+    font-size: 100px;
+}
+
+.title-2 {
+    color: white;
+    font-size: 70px;
+}
+
+.herobox-button {
+    width: 250px;
+    background-color: #E42021;
+    border-radius: 20px;
+    position: relative;
+    top: 58%;
+    left: 75%;
+}
+
+.button-order {
+    margin-left: 30px;
+}
+
+.button-order a {
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+    margin-left: 25px;
+}
+
+/* //////////////THIS CODE WILL TAKE CARE OF STYLING FOR THE MAIN CONTENT CONTAINER//////////////// */
+.main-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.content-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.options-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.option-1 {
+    width: 250px;
+    height: 500px;
+    margin: 5px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.option-image-1 {
+    width: 250px;
+    height: 400px;
+    background-image: url("./assets/findFriends.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.option-image-2 {
+    width: 250px;
+    height: 400px;
+    background-image: url("./assets/foodQuiz.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.option-2 {
+    width: 250px;
+    height: 500px;
+    margin: 10px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.option-1-button {
+    background-color: #E42021;
+    margin: 10px 20px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    
+}
+
+.option-2-button {
+    background-color: #E42021;
+    margin: 10px 20px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    
+}
+
+.option-1-button a {
+    text-decoration: none;
+    color: white;
+}
+
+.option-2-button a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+@media (max-width: 920px){
+
+    .line {
+        width: 30px;
+        height: 3px;
+        background: white;
+        margin: 5px;
+    }
+
+    .navbar {
+        position: relative;
+    }
+
+    .hamburger {
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+    }
+
+    .nav-links {
+        position: relative;
+        background: black;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(100px at 90% -10%);
+        -webkit-clip-path: circle(100px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+        z-index: 2;
+
+
+    }
+
+    .nav-links.open {
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% -10%);
+        pointer-events: all;
+        z-index: 1;
+    }
+
+    .options-container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .herobox-button {
+        left: 50%;
+        top: 52%;
+    }
+
+}

@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*///////////////THIS CODE WILL TAKE CARE OF STYLING FOR THE NAVBAR///////////////////*/
+nav {
+    height: 10vh;
+    background-color: black;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    
+}
+
+.a-gg {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-icons {
+    width: 25px;
+    height: 25px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.home-icon {
+    width: 22px;
+    height: 22px;
+}
+
+.nav-li {
+    border: 1px solid transparent;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+
+}
+
+.nav-li:hover {
+    border: 1px solid white;
+    transition: 0.5s ease-in-out;
+    border-radius: 20px;
+
+}
+
+
+/*///////////////THIS CODE WILL TAKE CARE OF STYLING FOR THE CONTENT CONTAINER///////////////////*/
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.square-image {
+    width: 350px;
+    height: 350px;
+    background-image: url("../../assets/alcoholicDrinks.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.choice-btn {
+    width: 350px;
+    height: 60px;
+    border: 1px solid #E42021;
+    border-radius: 40px;
+    margin: 10px 5px;
+    padding: 10px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #E42021;
+    cursor: pointer;
+}
+
+.choice-btn:hover {
+    background-color: #E42021;
+    color: white;
+    transition: 0.5s ease-in-out;
+
+}
+
+.h1 {
+    color: #E42021;
+    border-bottom: 2px solid #E42021;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+
+
+
+
+/*////////////////MEDIA QUERIS FOR RESPONSIVNESS/////////////////*/
+@media (max-width: 920px){
+
+    .line {
+        width: 30px;
+        height: 3px;
+        background: white;
+        margin: 5px;
+    }
+
+    .navbar {
+        position: relative;
+    }
+
+    .hamburger {
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+    }
+
+    .nav-links {
+        position: relative;
+        background: black;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(100px at 90% -10%);
+        -webkit-clip-path: circle(100px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+        z-index: 2;
+
+
+    }
+
+    .nav-links.open {
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% -10%);
+        pointer-events: all;
+        z-index: 1;
+    }
+    
+}
